@@ -91,6 +91,7 @@ newGameButton.addEventListener("click", () => {
             }
         }
         createCustomGrid(userInput);
+        break
     }
 });
 
