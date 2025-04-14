@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #07575b;
+    justify-content: space-evenly;
+}
+
+h3 {
+    font-family: 'Press Start 2P', cursive;;
+    align-self: center;
+    color: orange;
+    margin: 0px;
+}
+
+#container {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: black;
+}
+
+.column {
+    flex: 1;
+    border: 1px solid white;
+    opacity: 1;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+}
+
+#newGameButton {
+    width: max-content;
+
+}
+
+#resetButton {
+    width: max-content;
+
+}
+
+#buttonContainer {
+    display: flex;
+    gap: 15px;
+    align-self: center;
+}
