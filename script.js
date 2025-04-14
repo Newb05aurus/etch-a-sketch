@@ -13,7 +13,7 @@ rowDiv.classList.add("row");
 colDiv.classList.add("column");
 
 
-function generateRandomColor() {
+function getRandomColor() {
     let randomColor = "#";
     for (i = 0; i < 6; i++) {
         randomColor += hexValues[Math.floor(Math.random() * 16)];
@@ -21,7 +21,7 @@ function generateRandomColor() {
     return randomColor;
 }
 
-function lowerOpacityOfSquare(event) {
+function decreaseOpacityOfSquare(event) {
     const currentOpacity = parseFloat(window.getComputedStyle(event.target).opacity);
     const newOpacity = Math.max(currentOpacity - 0.1, 0);
     return newOpacity;
@@ -59,8 +59,8 @@ function createCustomGrid(userInput) {
 }
 
 containerBox.addEventListener("mouseover", (event) => { 
-    event.target.style.backgroundColor = generateRandomColor();
-    event.target.style.opacity = lowerOpacityOfSquare(event);
+    event.target.style.backgroundColor = getRandomColor();
+    event.target.style.opacity = decreaseOpacityOfSquare(event);
 });
 
 newGameButton.addEventListener("click", () => {
