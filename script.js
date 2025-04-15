@@ -58,15 +58,15 @@ function createCustomGrid(userInput) {
 
 }
 
-containerBox.addEventListener("mouseover", (event) => { 
+containerBox.addEventListener("mouseover", (event) => {
     event.target.style.backgroundColor = getRandomColor();
     event.target.style.opacity = decreaseOpacityOfSquare(event);
 });
 
 newGameButton.addEventListener("click", () => {
     userInput = prompt("How many rows and columns?");
-// Input validation:
-    top: while (userInput !== null) { 
+    // Input validation:
+    top: while (userInput !== null) {
         userInput = +userInput;
         while (isNaN(userInput) || !Number.isInteger(userInput) || userInput > 100 || userInput === 0 || typeof userInput === 'string') {
             if (userInput === null) break top;
@@ -91,10 +91,10 @@ newGameButton.addEventListener("click", () => {
             }
         }
         createCustomGrid(userInput);
-        break
+        break;
     }
 });
 
-resetButton.addEventListener("click", () => { 
+resetButton.addEventListener("click", () => {
     create16x16Grid();
 })
